@@ -19,5 +19,6 @@ export class EncountersComponent implements OnInit {
       console.log(encounters);
     }
   
+    
 
 }
