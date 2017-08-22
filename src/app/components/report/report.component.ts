@@ -4,13 +4,24 @@ import { AlienService} from '../../services/alien';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
+  styles: [],
+  providers: [
+    AlienService
+  ]
 })
 export class ReportComponent implements OnInit {
 
-  constructor(alienService: AlienService) { }
+  constructor(private alienService: AlienService) { }
 
-  ngOnInit() {
+  // ngOnInit() {
+  //   this.alienService.getAliens().then(response => {
+  //     console.log(response);
+  //   });
+  // }
+
+  async ngOnInit() {
+    const aliens = await this.alienService.getAliens();
+    console.log(aliens);
   }
 
 }
