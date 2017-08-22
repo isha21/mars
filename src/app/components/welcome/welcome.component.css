@@ -1,4 +1,18 @@
-.test{
+.welcome{
   background:pink;
-  color:green;
+  color:blueviolet;
+  display: flex;
+  height:100vh;
+  justify-content: center;
+  text-transform: uppercase;
 } 
+
+.welcome-circle{
+  background:pink;
+  color:blueviolet;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
