@@ -18,8 +18,9 @@ export class AlienService{
     }
   
 
-    handleError(error) {
-      console.log(error);
+    private handleError(error: any): Promise<any> {
+      console.error('An error occured', error);
+      return Promise.reject(error.message || error);
     }
 
 } 
