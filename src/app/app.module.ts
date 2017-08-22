@@ -7,7 +7,7 @@ import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RegisterComponent } from './components/register/register.component';
-import { EncounterComponent } from './components/encounter/encounter.component';
+import { EncountersComponent } from './components/encounters/encounters.component';
 import { ReportComponent } from './components/report/report.component';
 
 
@@ -20,7 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     WelcomeComponent,
     RegisterComponent,
-    EncounterComponent,
+    EncountersComponent,
     ReportComponent,
     NotFoundComponent
   ],

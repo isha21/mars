@@ -4,16 +4,16 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class ReportService{
- ReportUrl = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+export class EncounterService{
+encountersUrl = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
   constructor(private http: Http) {}
 
 
     getReport(): Promise<Report[]> {
-      return this.http.get(this.ReportUrl)
+      return this.http.get(this.encountersUrl)
       .toPromise()
-      .then((response) => response.json().aliens)
+      .then((response) => response.json().encounters)
       .catch(this.handleError);
     }
   
