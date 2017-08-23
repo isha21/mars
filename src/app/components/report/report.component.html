@@ -1,3 +1,17 @@
-<p>
-  this is report page!
-</p>
+<div class="encounter-page">
+  
+    <h1>Report Encounter
+    <span>Safety on Mars is Your Responsibility</span>
+    </h1>
+        <form [formGroup]="EncounterForm" novalidate (submit)="registerEncounters()">
+          <input type="text" placeholder="" formControlName="name" />
+          <input type="number" formControlName="age" />
+          <select formControlName="job_id">
+            <option value="">Select a Job</option>
+            <option *ngFor="let job of jobs" value="{{job.id}}">{{job.name}}</option>
+          </select>
+          <button [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
+        </form>
+         {{registerForm.value | json}}
+         {{registerForm.status | json}}
+        </div>
