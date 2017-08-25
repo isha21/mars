@@ -23,11 +23,11 @@ export class ReportComponent implements OnInit {
  public report: NewReport[];
  public date;
 
-//  reportForm = new FormGroup({
-//   description: new FormControl('', [Validators.required, Validators.maxLength(5000), Validators.minLength(10)]),
-//   alien_id: new FormControl('',[Validators.required, ])
+ reportForm = new FormGroup({
+  description: new FormControl('', [Validators.required, Validators.maxLength(5000), Validators.minLength(10)]),
+  alien_id: new FormControl('',[])
   
-// });
+});
  
  constructor(private alienService: AlienService, private encounterService:EncounterService) { }
 
@@ -41,14 +41,17 @@ export class ReportComponent implements OnInit {
     
       }
 
-//  async reportEncounters(){
-//   const newReport: NewReport = {
-//     atype : this.reportForm.get('alien_id').value,
-//     date : this.date,
-//     action : this.reportForm.get('description').value,
-//     colonist_id :''
-//   }
-//  }
+ async reportEncounters(){
+  const newReport: NewReport = {
+    atype : this.reportForm.get('alien_id').value,
+    date : this.date,
+    action : this.reportForm.get('description').value,
+    colonist_id :'5'
+  }
+
+  const encounter = await this.encounterService.newEncounter(newReport);
+  
+ }
  
-    
+ 
 }

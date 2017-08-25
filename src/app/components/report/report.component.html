@@ -4,16 +4,17 @@
     <span>Safety on Mars is Your Responsibility</span>
     </h1>
         
+    <form [formGroup]="reportForm" novalidate (submit)="reportEncounters()">
+  
+          <textarea formControlName="description"type="text"></textarea>
 
-          <textarea type="text"></textarea>
-
-          <select>
+          <select formControlName="alien_id">
             <option value="">Select a Alien</option>
             <option *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type }}</option>
           </select>
 
-          <button type="submit">Submit</button>
-
+          <button routerLink='/encounters' type="submit">Submit</button>
+  
        
-        
+    </form>
         </div>
