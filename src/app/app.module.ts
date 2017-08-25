@@ -9,7 +9,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EncountersComponent } from './components/encounters/encounters.component';
 import { ReportComponent } from './components/report/report.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import {appRoutes} from './app.routes';
@@ -28,7 +28,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
