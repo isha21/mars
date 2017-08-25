@@ -1,4 +1,4 @@
-<div class="encounter-page">
+<!-- <div class="encounter-page">
 <h1>Report Encounter</h1>
 <h4>Safety on Mars is Your Responsibility</h4>
     <form [formGroup]="EncounterForm" novalidate (submit)="registerEncounters()">
@@ -12,6 +12,8 @@
     </form>
      {{registerForm.value | json}}
      {{registerForm.status | json}}
+    </div> -->
+    
+    <div *ngFor="let encounter of reports">{{encounter.date}}-{{encounter.atype}}
+    <p>{{encounter.action}}</p>
     </div>
-    
-    

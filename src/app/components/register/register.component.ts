@@ -4,6 +4,7 @@ import { JobService} from '../../services/job';
 import { Job} from '../../models/job';
 import { FormControl, FormGroup, Validators, ValidatorFn} from '@angular/forms';
 import { NewColonist} from '../../models/colonist';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
    registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.maxLength(100), Validators.minLength(2)]),
-      age:  new FormControl('', [Validators.required, Validators.max(150000), Validators.min(0)]),
+      age:  new FormControl('', [Validators.required, Validators.max(100), Validators.min(0)]),
       job_id: new FormControl('',[Validators.required, ])
       
    });
@@ -30,7 +31,9 @@ export class RegisterComponent implements OnInit {
 
   constructor(
   private jobService: JobService,
-   private colonistService: colonistService
+  private colonistService: colonistService,
+  private router: Router,
+
   ){}
 
   async ngOnInit() {
@@ -49,7 +52,7 @@ async registerColonist(){
 
 
   const colonist = await this.colonistService.registerColonist(newColonist);
-  console.log('colonist was saved!', colonist);
+   if (this.registerForm.status === 'VALID'){this.router.navigate(['/encounters']);}
 }
 
 private noNumbers(validNameRegex): ValidatorFn{
