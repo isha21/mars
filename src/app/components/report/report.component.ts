@@ -20,7 +20,6 @@ import { FormControl, FormGroup, Validators, ValidatorFn} from '@angular/forms';
 export class ReportComponent implements OnInit {
 
  public aliens: Alien[];
- public report: NewReport[];
  public date;
 
  reportForm = new FormGroup({
@@ -29,7 +28,8 @@ export class ReportComponent implements OnInit {
   
 });
  
- constructor(private alienService: AlienService, private encounterService:EncounterService) { }
+ constructor(private alienService: AlienService, private encounterService:EncounterService, 
+  private router:Router) { }
 
   
   async ngOnInit() {  
@@ -49,7 +49,9 @@ export class ReportComponent implements OnInit {
     colonist_id :'5'
   }
 
-  const encounter = await this.encounterService.newEncounter(newReport);
+ await this.encounterService.newEncounter(newReport);
+       this.router.navigate(['encounters']);
+      
   
  }
  
