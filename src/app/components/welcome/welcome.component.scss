@@ -8,7 +8,7 @@
   width:100%;
 } 
 
-.welcome-circle{
+.pulse{
   background:red;
   height:100vh;
   display: flex;
@@ -28,4 +28,20 @@
 
 .mars-header{
   color:orangered;
+}
+
+@keyframes buttonTransition {
+  from {
+      transform: scale(0.2);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+.innerCircle {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: buttonTransition;
+  transform-origin: center center;
 }
