@@ -8,14 +8,8 @@
   width:100%;
 } 
 
-.circle{
-  background:red;
-  height:100vh;
-  display: flex;
-  justify-content:center;
-  position:relative;
-
-  
+.circle-container{
+  display:flex;
 }
 
 .innerCircle {
@@ -28,8 +22,8 @@
 .circle-text{
   font-size:0.75rem;
   margin:50%;
-  
-
+  text-transform:uppercase;
+  position:relative;
 }
 
 .mars-header{
