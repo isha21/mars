@@ -16,18 +16,18 @@
 
 .welcome{
   background:pink;
-  display: flex;
   height:100vh;
-  justify-content: center;
   text-transform: uppercase;
-  position: absolute;
   width:100%;
 } 
 
 
 .circle-container{
   display:flex;
+  justify-content: center;
+  height: 100vh;
 }
+
 
 .innerCircle {
   animation-duration: 1s;
