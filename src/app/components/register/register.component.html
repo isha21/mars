@@ -1,14 +1,24 @@
 <div class="register-page">
 <form [formGroup]="registerForm" novalidate (submit)="registerColonist()">
+  <div class="input">
+  <p>Enter Your Name</p>
   <input type="text" placeholder="" formControlName="name" />
+  </div>
+  <div>
+  <p>Enter Your Age</p>
   <input type="number" formControlName="age" />
+  </div>
+  <div>
+  <p>Select a Job</p>
   <select formControlName="job_id">
     <option value="">Select a Job</option>
     <option *ngFor="let job of jobs" value="{{job.id}}">{{job.name}}</option>
   </select>
+  </div>
+  <div>
   <button class="hide" [disabled]="registerForm.status === 'INVALID'" type="submit">Register</button>
+  </div>
 </form>
- 
 </div>
 
 
