@@ -12,7 +12,7 @@ import { FormControl, FormGroup, Validators, ValidatorFn} from '@angular/forms';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styles: [],
+  styles: ['./report.component.scss'],
   providers: [
     AlienService, EncounterService, colonistService
   ]

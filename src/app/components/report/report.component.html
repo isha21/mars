@@ -1,18 +1,22 @@
 <div class="encounter-page">
   
-    <h1>Report Encounter
-    <span>Safety on Mars is Your Responsibility</span>
-    </h1>
+    <h1>Report Encounter </h1>
+    <h3>Safety on Mars is Your Responsibility</h3>
+  
         
     <form [formGroup]="reportForm" novalidate (submit)="reportEncounters()">
   
-          <textarea formControlName="description"type="text"></textarea>
-
+        
+      <h4>Select an Alien</h4>
           <select formControlName="alien_id">
+            <div class="alien-select">
             <option value="">Select a Alien</option>
+            </div>
             <option *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type }}</option>
           </select>
-
+          <div>
+          <textarea formControlName="description"type="text"></textarea>
+          </div>
           <button type="submit">Submit</button>
   
        
