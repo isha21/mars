@@ -9,11 +9,12 @@ import { Router} from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styles: [],
+  styles: ['./register.component.scss'],
   providers: [
     colonistService,
     JobService
   ]
+  
 })
 export class RegisterComponent implements OnInit {
 

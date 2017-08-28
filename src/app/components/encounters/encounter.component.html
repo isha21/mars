@@ -1,7 +1,13 @@
 
     <div class="encounter-button">
-            <a routerLink ="/report"><button type="button"> Click Here to Report Encounter</button></a>
-        </div>    
+    <h1>See an Alien?<span>Report It By Clicking the Button Below</span></h1>
+    
+            <a routerLink ="/report"><button type="button"> Click on the Red Background to Report Encounter</button></a>
+   </div>    
+
+   <div>
+   <h1>Recent Encounters</h1>
+   </div>
            
     
     <div *ngFor="let encounter of reports">{{encounter.date}}-{{encounter.atype}}
