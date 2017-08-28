@@ -15,6 +15,7 @@
             <option *ngFor="let alien of aliens" [value]="alien.type">{{ alien.type }}</option>
           </select>
           <div>
+          <h2>Type a Description of the Alien (maximum length is 5000 characters)</h2>
           <textarea formControlName="description"type="text"></textarea>
           </div>
           <button type="submit">Submit</button>
