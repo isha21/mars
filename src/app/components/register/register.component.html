@@ -1,11 +1,11 @@
 <div class="register-page">
 <form [formGroup]="registerForm" novalidate (submit)="registerColonist()">
   <div class="input">
-  <p>Enter Your Name</p>
+  <p>Enter Your Name (Must be less than 100 characters) </p>
   <input type="text" placeholder="" formControlName="name" />
   </div>
   <div>
-  <p>Enter Your Age</p>
+  <p>Enter Your Age (Must be between 10 and 100)</p>
   <input type="number" formControlName="age" />
   </div>
   <div>
